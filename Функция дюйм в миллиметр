@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+
+float value(int a) {
+    float b;
+    b = 25.4 * a;
+    return b;
+}
+int main()
+{
+    setlocale(0, "rus");
+    std::cout << "Введите длину в дюймах: ";
+    float a;
+    std::cin >> a;
+    std::cout<<value(a);
+}
