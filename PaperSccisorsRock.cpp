@@ -1,11 +1,14 @@
+//In this game you will play Sccisors Paper Rock with two bots, the duration of the game - 4 rounds
+//Each time someone wins, gets 2$ and those who mistaken in choose of their item will lose 1$
+//LUck in duck for YoU ;)
 #include <iostream>
-#include <Windows.h>
+#include <windows.h>
 
 int main()
 {
     srand(time(0));
-    int random1{0};
-    int random2{0};
+    int random1{ 0 };
+    int random2{ 0 };
     size_t user{ 0 };
     size_t first_bot{ 0 };
     size_t second_bot{ 0 };
@@ -13,8 +16,8 @@ int main()
     int bank_1{ 10 };
     int bank_2{ 10 };
 
+    std::cout << ">>>>Game will be played 3 times<<<<" << std::endl;
 
-    //size_t user_input{ 0 };
     for (int i = 0; i < 3; i++) {
         random1 = rand() % 3 + 1;
         Sleep(500);
