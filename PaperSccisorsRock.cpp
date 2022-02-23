@@ -27,7 +27,7 @@ int main()
         std::cout << "Input (STONE = 1 or SCISSORS = 2 or PAPER = 3): ";
         std::cin >> user;
 
-        while (user > 3 && user < 0) {
+        while (user > 3 || user < 0) {
             std::cout << "INPUT INVALID" << std::endl;
             std::cin >> user;
         }
