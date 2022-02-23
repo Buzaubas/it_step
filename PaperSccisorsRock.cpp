@@ -1,16 +1,11 @@
 #include <iostream>
 #include <Windows.h>
 
-
-enum SPR {
-    STONE = 1, SCISSORS, PAPER
-};
-
 int main()
 {
     srand(time(0));
-    int random1 = rand() % 3 + 1;
-    int random2 = rand() % 3 + 1;
+    int random1{0};
+    int random2{0};
     size_t user{ 0 };
     size_t first_bot{ 0 };
     size_t second_bot{ 0 };
@@ -22,7 +17,7 @@ int main()
     //size_t user_input{ 0 };
     for (int i = 0; i < 3; i++) {
         random1 = rand() % 3 + 1;
-        Sleep(1000);
+        Sleep(500);
         random2 = rand() % (3 - 1 + 1) + 1;
         std::cout << "Input (STONE = 1 or SCISSORS = 2 or PAPER = 3): ";
         std::cin >> user;
