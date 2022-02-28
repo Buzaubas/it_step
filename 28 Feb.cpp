@@ -34,16 +34,64 @@ int p(int a) {
 	return 1234;
 }
 
-double sm(double a, double b) {
-	double ans = a + b;
-	return ans;
+//int sm(int a, int b)
+//
+//	{
+//
+//		float result;
+//
+//		result = (int)a + (int)b;
+//
+//		return result;
+//
+//	}
+//
+//double sm(double a, double b)
+//
+//	{
+//
+//		double result;
+//
+//		result = (double)a * (double)b;
+//
+//		return result;
+//
+//	}
 
+double tri(double& a, double& b, double c, double q) {
+	double angle = cos(q);
+	a = angle * c;
+	b = sqrt(pow(c, 2) - pow(a, 2));
+	return 1;
 }
 
-int sm(int a, int b) {
-	int ans = a + b;
-	return ans;
-	
+int swap(int& a, int& b) {
+	int mid = a;
+	a = b;
+	b = mid;
+	return 1;
+}
+
+int swap1(int& a, int& b, int& c) {
+	int mid1 = a;
+	int mid2 = b;
+	a = c;
+	b = mid1;
+	c = mid2;
+	return 1;
+}
+
+int last(int& a, int& b, int x, int y) {
+	a = x * y;
+	if (y == 0) {
+		return 0;
+	}
+	else {
+		b = x / y;
+		std::cout << "Result = " << a << std::endl;
+		std::cout << "Result = " << b << std::endl;
+		return 1;
+	}
 }
 
 
@@ -69,12 +117,32 @@ int main() {
 	ans = p(a);
 	std::cout << ans << std::endl;*/
 
-	int a{ 4.3 }, b{ 3.5 }, ans{ 0 };
-	ans = sm(a, b);
-	std::cout << ans << std::endl;
 
+	/*int u = sm(3, 4);
+	double v = sm(20.5, 10.5);
 
+	std::cout << "Result = " << u << std::endl;
 
+	std::cout << "Result = " << v << std::endl;*/
+
+	/*double c{ 13 }, q{ 30 }, a{ 0 }, b{ 0 };
+	tri(a, b, c, q);
+	std::cout << a << " " << b << std::endl;*/
+
+	/*int a{ 4 }, b{ 9 };
+	swap(a, b);
+	std::cout << "Result = " << a << std::endl;
+	std::cout << "Result = " << b << std::endl;*/
+
+	/*int a{ 4 }, b{ 9 }, c{1};
+	swap1(a, b, c);
+	std::cout << "Result = " << a << std::endl;
+	std::cout << "Result = " << b << std::endl;
+	std::cout << "Result = " << c << std::endl;*/
+
+	int a{ 4 }, b{ 9 }, x{ 9 }, y{3};
+	std::cout<<last(a, b, x, y);
+	
 
 
 
