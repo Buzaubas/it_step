@@ -1,0 +1,27 @@
+
+	int* array = nullptr;  // указатель на массив
+	int rows = 0, columns = 0;
+
+	/* Определяем случайный размер массива */
+	srand(time(NULL));
+	rows = rand() % 10 + 2;
+	columns = rand() % 10 + 2;
+
+	/* Выделение памяти */
+	//array = (int*)malloc(rows * columns * sizeof(int));
+	array = new int[rows * columns];
+
+	/* Ввод элементов массива */
+	for (int i = 0; i < rows; i++)  // цикл по строкам
+	{
+		for (int j = 0; j < columns; j++)  // цикл по столбцам
+		{
+			array[columns * i + j] = rand() % 50 + 1;
+		}
+	}
+
+	pointer_arithmetic(array, rows, columns);
+
+	int* point = array;
+	std::cout << *point << std::endl;
+	std::cout << *(point + (rows * columns) - 1) << std::endl;
